@@ -97,8 +97,8 @@ const updateMovie = async (req,res) =>{
         var user = await Movie.findByIdAndUpdate(_id,{
             name,yearOfTheRelease,plot,
             poster,actors,producer,
-            new:true 
-        }).populate("actors",{name:1})
+            
+        }, {new: true} ).populate("actors",{name:1})
         user.save()
         
         res.status(200).json({
