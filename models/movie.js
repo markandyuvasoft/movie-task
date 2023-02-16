@@ -16,6 +16,10 @@ const movieSchema = new mongoose.Schema(
     poster: {
       type: String,
     },
+    identity:{
+      type: String,
+
+    },
     actorId:{
       type: mongoose.Schema.Types.ObjectId,
       ref: 'actor'
@@ -38,6 +42,6 @@ const movieSchema = new mongoose.Schema(
   { versionKey: false }
 );
 
-const Movie = mongoose.model("movie", movieSchema);
+const Movie = mongoose.model("movietricaljsd", movieSchema);
 
 export default Movie;
